@@ -1,0 +1,19 @@
+*{
+    padding:0;
+    margin:0;
+    padding: 0;
+    /* background-color: #e2e2e2; */
+}
+
+* p{
+    color: #081D3A;
+}
+
+.appContainer{
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,130 @@
+.intitutionbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.intitutionbody a {
+    background-color: #0e2d58;
+    width: 10%;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: white;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+}
+
+.intitutionbody a:hover {
+    background-color: #081D3A;
+}
+
+
+.intitutionbody img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+
+
+
+.name {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+
+
+.presentation{
+    width: 80%;
+    margin: 2em;
+    padding: 1em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    word-break:break-all;
+    white-space: pre-wrap;
+}
+
+.presentation img {
+    width: 20%;
+}
+
+.presentation p {
+    padding: 2em;
+}
+
+
+
+.historybody {
+    background-color: white;
+    width: 80%;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 0.5em;
+    word-break:break-all;
+    white-space: pre-wrap;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+}
+
+.historybody p {
+    font-size: 2em;
+    margin: 1em;
+}
+
+.historyinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.historyinfo img {
+    flex: 1;
+    width: 20%;
+    height: auto;
+    border-radius: 0.5em;
+    margin-right: 1em;
+}
+
+.historyinfo p{
+    flex: 1;
+    max-width: 70%;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+
+
+.objetive{
+    background-color: white;
+    width: 80%;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 0.5em;
+    word-break:break-all;
+    font-size: 1.2em;
+    white-space: pre-wrap;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+}
+
+.introduction,
+.history,
+.objetive {
+    margin: 1em 0;
+    line-height: 1.5; 
+}
+

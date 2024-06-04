@@ -1,0 +1,78 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.biografia {
+    display: flex;
+    font-size: 1.2em;
+    padding: 0.3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 100%;
+    white-space: pre-wrap;
+}
+
+.biografia>div {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.biografia img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 0.5em;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+}
+
+.biografiaText {
+    word-break:break-all;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    padding: 0.3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0.5em;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+
+.link div {
+    background-color: #081D3A;
+    height: 15em;
+    width: 10em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+}
+
+.link p {
+    color: white;
+}

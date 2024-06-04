@@ -1,0 +1,69 @@
+.bodycreate {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: 2em;
+    padding: 3em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+}
+
+.bodycreate h1 {
+    margin: 0.5em;
+}
+
+.bodycreate p {
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
+
+.conteinercreate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.conteinercreate input,
+.conteinercreate select,
+.conteinercreate textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.conteinercreate textarea {
+    font: 1em "Arial";
+}
+
+.conteinercreate input::placeholder {
+    color: #888;
+}
+
+.conteinercreate select {
+    height: 2.8em;
+}
+
+.bodycreate button, 
+.bodycreate a {
+    padding: 0.8em;
+    background-color: #0e2d58;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.bodycreate button:hover,
+.bodycreate a:hover {
+    background-color: #081D3A;
+}

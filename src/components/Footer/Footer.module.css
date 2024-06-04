@@ -1,0 +1,48 @@
+.bodyfooter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        border-radius: 0.5em;
+        font-size: 1.5em;
+        margin: 0.5em;
+        height: fit-content;
+}
+
+.bodyfooter img{
+        height: 4em;
+        width: auto;
+}
+
+.institution {
+        display: flex;
+        align-items: center;
+        width: 100%;
+}
+
+.institution img {
+        margin: 0 1em;
+}
+
+.contact {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 100%;
+}
+
+.contact p {
+        margin: 0 0.5em;
+}
+
+.socialnetwork {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 30%;
+        padding-right: 1em;
+}
+
+.whatsapp img{
+        height: 2.5em;
+}

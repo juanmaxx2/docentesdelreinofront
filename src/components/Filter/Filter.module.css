@@ -1,0 +1,71 @@
+.bodyfilter {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    height: fit-content;
+    font-size: large;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+}
+
+.filters {
+    background-color: #081D3A;
+    border-radius: 0.5em;
+    margin: 2em 0;
+    padding: 0.5em;
+} 
+
+.filters p {
+    color: #FFFFFF;
+}
+
+.bodyfilter p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bodyfilter select,
+.bodyfilter button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bodyfilter button {
+    background-color: #081D3A;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bodyfilter button:hover {
+    background-color: #041b3a;
+}
+
+.create {
+    width: 84%;
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background-color: #081D3A;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create:hover {
+    background-color: #041b3a;
+}
+
+.create a {
+    color: white;
+    text-decoration: none;
+}

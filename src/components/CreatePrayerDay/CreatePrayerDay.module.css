@@ -1,0 +1,6 @@
+.buttonCreate {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}

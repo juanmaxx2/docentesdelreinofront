@@ -1,0 +1,63 @@
+.bodyActivity {
+    background-color: #081D3A;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 1em;
+    border-radius: 0.5em;
+    width: calc(25% - 5em);
+    font-size: larger;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+}
+
+.infoImg {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.2em 0;
+}
+
+.actImg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.bodyActivity button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+}
+
+.bodyActivity img {
+    max-width: 95%;
+    border-radius: 0.5em;
+}
+
+.bodyActivity p {
+    text-decoration: none;
+    color: white;
+    padding: 0.2em;
+}
+
+.bodyActivity a {
+    text-decoration: none;
+    color: white;
+    padding: 0.2em;
+}

@@ -1,0 +1,22 @@
+.bodyNavBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.5em;
+  width: auto;
+  top: 2%;
+  padding: 0.4em;
+  margin: 0.5em;
+}
+
+.bodyNavBar div {
+  margin: 0 0.1em;
+}
+
+.bodyNavBar div a {
+  text-decoration: none;
+  color: #333;
+}
