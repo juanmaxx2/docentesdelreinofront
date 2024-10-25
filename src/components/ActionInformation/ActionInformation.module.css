@@ -1,0 +1,81 @@
+.body {
+    background-color: rgb(207, 207, 207);
+    width: 65%;
+    margin: 20px auto; 
+    border-radius: 2em;
+    display: flex;
+    flex-direction: row; /* Por defecto en fila */
+    align-items: center; 
+    padding: 1em; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.image {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1em; 
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5em; 
+    object-fit: cover; 
+}
+
+.informationBody {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 1em;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.information {
+    margin: 1.5em 0;
+}
+
+.information h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.information p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.informationBody p:last-child {
+    margin-top: 1em;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column; /* Cambia a columna en dispositivos más pequeños */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .image {
+        width: 100%; /* La imagen ocupa todo el ancho */
+        margin-bottom: 1em; /* Añade espacio entre la imagen y la información */
+    }
+
+    .informationBody {
+        width: 100%; /* Ancho completo para la información */
+        padding-left: 0; /* Sin padding en dispositivos pequeños */
+    }
+}

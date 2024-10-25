@@ -53,7 +53,7 @@
 .bodycreate button, 
 .bodycreate a {
     padding: 0.8em;
-    background-color: #0e2d58;
+    background-color: rgb(219, 182, 19);
     color: white;
     border: none;
     border-radius: 5px;
@@ -65,5 +65,5 @@
 
 .bodycreate button:hover,
 .bodycreate a:hover {
-    background-color: #081D3A;
+    background-color: rgb(192, 160, 16);
 }

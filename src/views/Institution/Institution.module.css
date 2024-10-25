@@ -1,3 +1,9 @@
+.conteiner {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
 .intitutionbody {
     display: flex;
     flex-direction: column;
@@ -6,6 +12,8 @@
     padding: 2em;
     text-align: center;
     min-height: 80vh;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .intitutionbody a {
@@ -16,15 +24,12 @@
     border-radius: 0.5em;
     text-decoration: none;
     color: white;
-    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
-    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
     box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
 }
 
 .intitutionbody a:hover {
     background-color: #081D3A;
 }
-
 
 .intitutionbody img {
     max-width: 100%;
@@ -33,91 +38,76 @@
     margin-bottom: 1em;
 }
 
-
-
-
 .name {
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 1em;
 }
 
-
-
-.presentation{
-    width: 80%;
+.introduction {
+    width: 80%; /* Cambiado a 90% para mejor ajuste en móviles */
     margin: 2em;
     padding: 1em;
     font-size: 1.2em;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    word-break:break-all;
+    flex-direction: column; /* Cambiado a columna para móviles */
+    align-items: center; /* Centrar el contenido */
+    word-break: break-all;
     white-space: pre-wrap;
 }
 
-.presentation img {
-    width: 20%;
+.introduction img {
+    width: 50%; /* Cambiado a 50% para mejor ajuste en móviles */
+    max-width: 200px; /* Máximo ancho para que no se estire demasiado */
 }
 
-.presentation p {
+.introduction p {
     padding: 2em;
 }
 
-
-
-.historybody {
+.informationBody {
     background-color: white;
-    width: 80%;
+    width: 90%; /* Cambiado a 90% para mejor ajuste en móviles */
     margin: 2em;
     padding: 1em;
     border-radius: 0.5em;
-    word-break:break-all;
+    word-break: break-all;
     white-space: pre-wrap;
-    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
-    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
     box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
 }
 
-.historybody p {
+.informationBody p {
     font-size: 2em;
     margin: 1em;
 }
 
-.historyinfo {
+.information {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
+    flex-direction: column; /* Cambiado a columna para móviles */
+    align-items: center; /* Centrar el contenido */
+    margin-bottom: 1em; /* Añadir margen inferior para separar secciones */
 }
 
-.historyinfo img {
-    flex: 1;
-    width: 20%;
-    height: auto;
-    border-radius: 0.5em;
-    margin-right: 1em;
+.information img {
+    width: 50%; /* Cambiado a 50% para mejor ajuste en móviles */
+    max-width: 150px; /* Máximo ancho para que no se estire demasiado */
+    margin: 0.5em; /* Añadir margen alrededor de las imágenes */
 }
 
-.historyinfo p{
-    flex: 1;
-    max-width: 70%;
+.information p {
     font-size: 1.2em;
     margin: 0;
 }
 
-
-
-.objetive{
+.objetive {
     background-color: white;
-    width: 80%;
+    width: 90%; /* Cambiado a 90% para mejor ajuste en móviles */
     margin: 2em;
     padding: 1em;
     border-radius: 0.5em;
-    word-break:break-all;
+    word-break: break-all;
     font-size: 1.2em;
     white-space: pre-wrap;
-    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
-    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
     box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
 }
 
@@ -128,3 +118,63 @@
     line-height: 1.5; 
 }
 
+.info {
+    width: 80%; /* Cambiado a 90% para mejor ajuste en móviles */
+    margin: 2em;
+    padding: 1em;
+    border-radius: 0.5em;
+    white-space: pre-wrap;
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para móviles */
+    align-items: center; /* Centrar el contenido */
+}
+
+.intitutionbody button {
+    display: block;
+    margin: 1.5em auto;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    color: white;
+    background-color: rgb(219, 182, 19);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.intitutionbody button:hover {
+    background-color: rgb(192, 160, 16);
+}
+
+/* Media Queries para dispositivos más grandes */
+@media (min-width: 768px) {
+    .introduction {
+        flex-direction: row; /* Regresar a columna para pantallas más grandes */
+        justify-content: space-between; /* Justificar el contenido */
+    }
+
+    .introduction img {
+        width: 20%; /* Ancho fijo en pantallas grandes */
+        max-width: none; /* Desactivar el max-width en pantallas grandes */
+    }
+
+    .information {
+        flex-direction: row; /* Regresar a fila para pantallas más grandes */
+        justify-content: space-between; /* Justificar el contenido */
+    }
+
+    .information img {
+        width: 20%; /* Ancho fijo en pantallas grandes */
+        max-width: none; /* Desactivar el max-width en pantallas grandes */
+    }
+
+    .informationBody {
+        width: 80%; /* Ajustar el ancho en pantallas más grandes */
+    }
+
+    .info {
+        flex-direction: row; /* Regresar a fila para pantallas más grandes */
+        justify-content: space-between; /* Justificar el contenido */
+    }
+}

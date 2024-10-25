@@ -62,6 +62,7 @@
     align-items: center;
     padding: 0.5em;
     margin: 0.5em;
+    min-width: fit-content;
 }
 
 .name p {
@@ -97,7 +98,7 @@
 }
 
 .bodyActivity a{
-    background-color: #0e2d58;
+    background-color: rgb(219, 182, 19);
     margin: 2em;
     padding: 0.5em 1.5em;
     color:white;
@@ -112,5 +113,5 @@
 }
 
 .bodyActivity a:hover {
-    background-color: #081D3A;
+    background-color: rgb(192, 160, 16);
 }

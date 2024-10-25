@@ -1,48 +1,52 @@
-.bodyfooter{
+.footer {
+        height: auto; /* Cambiado a auto para permitir más flexibilidad */
+        margin: 0;
+        padding: 1em 0; /* Agregado padding para más espacio interno */
+    }
+    
+    .footer hr {
+        height: 0.05em;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.2;
+    }
+    
+    .footerConteiner {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: white;
-        border-radius: 0.5em;
-        font-size: 1.5em;
-        margin: 0.5em;
-        height: fit-content;
-}
-
-.bodyfooter img{
-        height: 4em;
-        width: auto;
-}
-
-.institution {
+        flex-direction: column; /* Cambiado a columna para dispositivos móviles */
+        align-items: center; /* Centrado en dispositivos móviles */
+    }
+    
+    .footerConteiner p {
+        padding: 0 2em;
+        font-size: x-large;
+        text-align: center; /* Centrado del texto */
+        margin: 0.5em 0; /* Agregado margen para separación */
+    }
+    
+    .logo {
         display: flex;
-        align-items: center;
-        width: 100%;
-}
-
-.institution img {
-        margin: 0 1em;
-}
-
-.contact {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        width: 100%;
-}
-
-.contact p {
-        margin: 0 0.5em;
-}
-
-.socialnetwork {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        width: 30%;
-        padding-right: 1em;
-}
-
-.whatsapp img{
-        height: 2.5em;
-}
+        justify-content: center; /* Centrado de los logos */
+        flex-wrap: wrap; /* Permite que los logos se ajusten a nuevas líneas si es necesario */
+    }
+    
+    .logo img {
+        width: 3.5em;
+        margin: 0 1em; /* Espaciado horizontal uniforme */
+    }
+    
+    /* Estilos para pantallas más grandes */
+    @media (min-width: 768px) {
+        .footerConteiner {
+            flex-direction: row; /* Cambiar a fila en pantallas grandes */
+            justify-content: space-between; /* Espaciado uniforme */
+        }
+    
+        .footerConteiner p {
+            text-align: left; /* Alinear texto a la izquierda en pantallas grandes */
+        }
+    
+        .logo {
+            justify-content: flex-end; /* Alinear logos a la derecha en pantallas grandes */
+        }
+    }
+    

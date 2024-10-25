@@ -1,0 +1,139 @@
+.fatherConteiner {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.conteiner {
+    min-height: 80vh;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+    background-color: #f9f9f9;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.conteiner h1 {
+    margin-bottom: 1em;
+}
+
+.conteiner button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: rgb(219, 182, 19);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 1em auto;
+    width: 50%;
+    max-height: 3em;
+}
+
+.buttonLoading {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: rgb(219, 182, 19);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 1em auto;
+    width: 50%;
+    max-height: 3em;
+}
+
+.conteiner button:hover {
+    background-color: rgb(192, 160, 16);
+}
+
+.conteinerProvince {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    max-width: 600px;
+    text-align: center;
+}
+
+.conteinerProvince h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.conteinerProvince p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.conteinerProvince a {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    text-decoration: 0;
+    color: black;
+}
+
+.conteinerProvince img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0.5em;
+}
+
+.conteinerProvince h2 {
+    font-size: 1.8em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.conteinerProvince button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: rgb(219, 182, 19);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+.conteinerProvince button:hover {
+    background-color: rgb(192, 160, 16);
+}
+
+.conteinerloader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid #e2e2e2;
+    /* Light grey */
+    border-top: 16px solid #081D3A;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

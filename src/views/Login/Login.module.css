@@ -1,0 +1,98 @@
+/* Estilos para el contenedor padre */
+.fatherConteiner {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para el contenedor del formulario */
+.conteiner {
+    background-color: white;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    text-align: center;
+    max-width: 500px; /* Limita el ancho para que no sea demasiado grande en pantallas grandes */
+}
+
+/* Estilos para el título del formulario */
+.conteiner p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #0e2d58; /* Color de texto más oscuro */
+    font-weight: bold;
+}
+
+/* Estilos para los inputs */
+.conteiner input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.conteiner input:focus {
+    border-color: #0e2d58; /* Cambia el color del borde cuando el campo está enfocado */
+    outline: none;
+}
+
+/* Estilos para los botones */
+.conteiner button {
+    padding: 10px;
+    width: 50%;
+    background-color: #1d4b8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin:0 auto;
+    margin-bottom: 10px;
+}
+
+/* Efecto hover en los botones */
+.conteiner button:hover {
+    background-color: #103a6e;
+}
+
+/* Estilo especial para el botón "Crear Cuenta" */
+.conteiner button:last-of-type {
+    background-color: rgb(219, 182, 19); /* Color rojo para diferenciar la acción */
+}
+
+.conteiner button:last-of-type:hover {
+    background-color: rgb(192, 160, 16);
+}
+
+/* Estilos para los mensajes de error */
+.conteiner p[style] {
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .conteiner {
+        width: 80%;
+        padding: 1.5em;
+    }
+
+    .conteiner p {
+        font-size: 1.3em;
+    }
+
+    .conteiner button {
+        font-size: 1em;
+    }
+}

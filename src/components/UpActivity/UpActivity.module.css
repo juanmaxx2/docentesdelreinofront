@@ -1,6 +1,20 @@
+.formContainer{
+    width: 100%;
+    text-align: center;
+}
+
+.formContainer p{
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5em;
+}
+
+
 .formContainer form{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .formContainer textarea,
@@ -12,4 +26,14 @@
 .button {
     display: flex;
     justify-content: space-around;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.input div {
+    width: 48%;
 }

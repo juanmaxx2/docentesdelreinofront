@@ -4,7 +4,6 @@ import { getActivity } from '../../redux/actions';
 import { useParams } from 'react-router-dom';
 import { NavBar, Footer } from '../';
 import style from './ActivityDetail.module.css';
-import Congreso2 from '../../assets/Congreso2.jpg';
 import { Link } from "react-router-dom";
 
 const ActivityDetail = () => {
@@ -26,14 +25,22 @@ const ActivityDetail = () => {
             <div className={style.bodyActivity}>
                 <div className={style.IntroductionActivity}>
                     <div className={style.IntroductionActivityImg}>
-                        <img src={Congreso2} alt="Congreso" />
+                        <img src={activity.image} alt="Congreso" />
                     </div>
                     <div className={style.IntroductionActivityInfo}>
                         <div className={style.name}>
                             <p>{activity.title}</p>
                         </div>
                         <div className={style.description}>
-                            <p>{activity.tipo}</p>
+                            {
+                                activity.tipo=='1'?(<p>Congreso</p>):(
+                                    activity.tipo=='2'?(<p>Conferencia</p>):(
+                                        activity.tipo=='3'?(<p>Charla</p>):(
+                                            <p>Jornada de Oracion</p>
+                                        )
+                                    )
+                                )
+                            }
                             <p>{activity.description}</p>
                         </div>
                     </div>
@@ -46,15 +53,14 @@ const ActivityDetail = () => {
                     </div>
                     <div>
                         <p>Fecha:</p>
-                        <p>{activity.date}</p>
-                        <p>{activity.schedule}</p>
+                        {activity.date?(<p>{activity.date.day}/{activity.date.month}/{activity.date.year}</p>):(<></>)}
+                        <p>{activity.time}</p>
                     </div>
                     <div>
                         <p>Valor de Inscripcion:</p>
-                        <p>{activity.value_Inscription}</p>
+                        <p>${activity.value_Inscription}</p>
                     </div>
                 </div>
-                <Link to={`/updateactivity/${id}/activity`}><div>Modificar</div></Link>
                 <Link to={'/activities'}><div>atras</div></Link>
             </div>
             <Footer />

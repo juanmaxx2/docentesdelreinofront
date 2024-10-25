@@ -9,16 +9,14 @@
     justify-content: center;
     margin: 0 0.5em;
     gap: 2em;
+    flex-wrap: wrap; /* Permite que el contenedor se ajuste en pantallas más pequeñas */
 }
 
 .activities {
-    background-color: white;
     min-height: 80vh;
     border-radius: 10px;
-    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
-    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
-    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
-    width: 80%;
+    width: 100%; /* Cambiado a 100% para móviles */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
 }
 
 .conteiner {
@@ -27,8 +25,7 @@
     justify-content: flex-start;
 }
 
-.conteinerloader{
-    /* background-color: red; */
+.conteinerloader {
     height: 100%;
     width: 100%;
     display: flex;
@@ -48,4 +45,22 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media (min-width: 1024px) {
+    .bodyActivities {
+        flex-direction: row;
+    }
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .bodyActivities {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        gap: 1em; /* Reduce el espacio entre elementos */
+    }
+
+    .activities {
+        width: 90%; /* Aumenta el ancho para pantallas pequeñas */
+    }
 }

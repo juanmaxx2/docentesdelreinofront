@@ -3,6 +3,8 @@ import { getActivities, getProvince } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import style from './Filter.module.css';
 import { Link } from "react-router-dom";
+import MapFilter from "../MapFilter/MapFilter";
+
 
 const Filter = () => {
     const dispatch = useDispatch();
@@ -26,28 +28,32 @@ const Filter = () => {
         value: 5
     }];
 
-    const provinces = useSelector(state => state.provinces);
-    
     const [tipo, setTipo] = useState('all');
+    const [date, setDate] = useState('all');
     const [province, setProvince] = useState('all');
-    
-    useEffect(() => {
-        dispatch(getProvince());
-    }, [dispatch]);
+    const today = new Date().toISOString().split('T')[0];
+
+    const onClickProvince = () => {
+        setProvince('all')
+    }
+
+    const onClickDate = () => {
+        setDate('all')
+    }
 
     const onChangeHandlerTipo = (event) => {
         const value = event.target.value;
         setTipo(value);
     };
 
-    const onChangeHandlerProvince = (event) => {
+    const onChangeHandlerDate = (event) => {
         const value = event.target.value;
-        setProvince(value);
+        setDate(value);
     };
 
     const sumbitHandler = (event) => {
         event.preventDefault();
-        dispatch(getActivities(tipo, province));
+        dispatch(getActivities(tipo, province, date));
     };
 
     return (
@@ -69,29 +75,48 @@ const Filter = () => {
                     </select>
                 </div>
 
+                <div>
+                    <p>Fecha</p>
+                    <div>
+                        <input
+                            type="date"
+                            value={date === 'all' ? '' : date}
+                            onChange={onChangeHandlerDate}
+                            placeholder="dd/mm/aaaa" // Aunque no se verá, es descriptivo
+                            className={style.dateInput}
+                            min={today} 
+                        />
+                        <button
+                            type='button'
+                            onClick={onClickDate}
+                        >
+                            Todas las fechas
+                        </button>
+                    </div>
+                </div>
+
                 <div className={style.filters}>
                     <p>Provincias</p>
-                    {
-                        provinces.length ? (
-                            <select onChange={onChangeHandlerProvince}>
-                                <option key='all' value='all'>Todas las provincias</option>
-                                {
-                                    provinces.map((province) => {
-                                        return (
-                                            <option key={province.name} value={province.name}>{province.name}</option>
-                                        );
-                                    })
-                                }
-                            </select>
-                        ) : (<></>)
-                    }
+                    <MapFilter
+                        selectedProvince={province}
+                        setSelectedProvince={setProvince}
+                    />
+                    {province == 'all' ?
+                        (
+                            <p>Todos</p>
+                        ) : (
+                            <p>{province}</p>
+                        )}
+                    <button 
+                        type='button' 
+                        onClick={onClickProvince}
+                    >
+                        Todas las provincias
+                    </button>
                 </div>
 
                 <button type='submit'>Filtrar</button>
             </form>
-            
-            <Link to='/create'><div className={style.create}>crear</div></Link>
-            
         </div>
     );
 };

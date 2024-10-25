@@ -1,8 +1,7 @@
-import { useState } from "react";
-import CreateActivity from "../../components/CreateActivity/CreateActivity";
-import CreatePrayerDay from "../../components/CreatePrayerDay/CreatePrayerDay";
-import { NavBar, Footer } from '../../components';
+import { useEffect, useState } from "react";
+import { NavBar, Footer, PedirLocalStorage, CreateActivity, CreatePrayerDay } from '../../components';
 import style from "./Create.module.css"
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
     const tipos = [{
@@ -26,6 +25,12 @@ const Create = () => {
     }];
 
     const [choose, setChoose] = useState('1');
+    
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!PedirLocalStorage('token')) navigate("/login");
+    }, [PedirLocalStorage]);
 
     const onChangeHandlerTipo = (event) => {
         const value = event.target.value;

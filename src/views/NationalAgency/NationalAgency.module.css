@@ -1,0 +1,13 @@
+.ActionBody {
+    min-height: 80vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    display: grid;
+    text-align: center;
+    margin: 2em auto;
+}

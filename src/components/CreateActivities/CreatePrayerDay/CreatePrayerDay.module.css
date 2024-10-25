@@ -1,0 +1,25 @@
+.conteiner {
+    width: 100%;
+    text-align: center;
+}
+
+.conteiner p{
+    margin-top: 0.8em;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.input div {
+    width: 48%;
+}
+
+.buttonCreate {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+};

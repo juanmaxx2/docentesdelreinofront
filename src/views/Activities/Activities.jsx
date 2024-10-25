@@ -6,10 +6,12 @@ import { useEffect, useState } from 'react';
 
 const Activities = () => {
     const dispatch = useDispatch();
-    const activities = PedirLocalStorage('activities');
+    const activities = useSelector(state => state.activities)
+
+    // activities.length?(null):(window.alert("No se encontraron actividades"))
 
     useEffect(() => {
-        dispatch(getActivities('all', 'all'));
+        dispatch(getActivities('all', 'all', 'all'));
     }, []);
 
     return (
@@ -31,17 +33,19 @@ const Activities = () => {
                                                     key={activity.id + "activitie"}
                                                     id={activity.id}
                                                     title={activity.title}
-                                                    schedule={activity.schedule}
+                                                    time={activity.time}
                                                     date={activity.date}
                                                     city={activity.city}
+                                                    image={activity.image}
                                                 />
                                             ) : (
                                                 <PrayerDay
                                                     key={activity.id + "prayerDay"}
                                                     id={activity.id}
                                                     title={activity.title}
-                                                    schedule={activity.title}
+                                                    time={activity.time}
                                                     date={activity.date}
+                                                    image={activity.image}
                                                 />
                                             )
                                             }

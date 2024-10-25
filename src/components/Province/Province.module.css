@@ -1,0 +1,101 @@
+.mapConteiner {
+    width: 100%; /* Cambiado a 100% para que ocupe el ancho completo en móviles */
+    display: flex;
+    flex-direction: column; /* Cambiar a columna para dispositivos móviles */
+}
+
+.provinceInfo {
+    width: 100%; /* Cambiado a 100% para que ocupe el ancho completo en móviles */
+}
+
+.provinceInfo p {
+    font-size: x-large;
+    padding: 1em;
+    text-align: center; /* Centrado del texto */
+}
+
+.provinceInfo img {
+    height: 10em;
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    border-radius: 0.5em;
+}
+
+.provinceInfoImg {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna en móviles */
+    width: 100%;
+    align-items: center; /* Centrar elementos en móviles */
+}
+
+.provinceInfoImg p {
+    font-size: large;
+    padding: 0.5em;
+    text-align: center; /* Centrado del texto */
+}
+
+.provinceInfoName {
+    height: auto; /* Cambiado a auto para adaptarse a contenido variable */
+}
+
+.provinceInfoMinisterio {
+    height: auto; /* Cambiado a auto para adaptarse a contenido variable */
+}
+
+.provinceInfoMinisterio a {
+    color: rgb(219, 182, 19);
+    text-decoration: none;
+    font-size: large;
+    text-decoration: underline;
+    display: block; /* Para ocupar el ancho completo */
+    text-align: center; /* Centrar el texto */
+}
+
+.provinceInfoMinisterioInformacion {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna en móviles */
+    align-items: center; /* Centrar los elementos */
+    margin: 1em 0; /* Margen entre los elementos */
+}
+
+.provinceInfoMinisterioInformacion a {
+    padding: 1em;
+    color: white;
+    background-color: rgb(219, 182, 19);
+    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    border-radius: 0.5em;
+    margin: 0.5em 0; /* Espacio entre botones */
+}
+
+.provinceInfoMinisterioLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los enlaces */
+}
+
+.provinceInfoMinisterioLinks a {
+    margin: 0.5em 0;
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 768px) {
+    .mapConteiner {
+        flex-direction: row; /* Cambiar a fila en pantallas grandes */
+    }
+
+    .provinceInfo {
+        width: 70%; /* Mantener el ancho en 70% en pantallas grandes */
+    }
+
+    .provinceInfoImg {
+        flex-direction: row; /* Volver a fila en pantallas grandes */
+    }
+
+    .provinceInfoMinisterioInformacion {
+        flex-direction: row; /* Volver a fila en pantallas grandes */
+        justify-content: space-around; /* Espaciado uniforme entre elementos */
+    }
+}

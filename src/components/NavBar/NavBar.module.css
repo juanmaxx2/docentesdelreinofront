@@ -1,22 +1,123 @@
+.conteinerNavBar {
+  height: 10vh;
+}
+
 .bodyNavBar {
+  height: 95%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: white;
-  border-radius: 0.5em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-size: 1.5em;
-  width: auto;
-  top: 2%;
-  padding: 0.4em;
-  margin: 0.5em;
 }
 
-.bodyNavBar div {
-  margin: 0 0.1em;
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.bodyNavBar div a {
+.logo img {
+  width: 5em;
+  margin: 0 2em;
+}
+
+.logoText {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+/* Button for mobile (hamburger) */
+.menuButton {
+  display: none;
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Opciones de navegación, visibles solo en pantallas grandes */
+.bodyOpciones {
+  display: flex;
+  flex-direction: row;
+}
+
+.bodyOpciones div a {
+  margin: 0 1.5em;
   text-decoration: none;
   color: #333;
+  font-size: x-large;
+}
+
+.bodyOpciones div a:hover {
+  color: #0d0f74;
+}
+
+.bodyOpciones div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Menu oculto en pantallas pequeñas por defecto */
+.bodyOpciones {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Mostrar menú cuando se presiona el botón hamburguesa */
+.showMenu {
+  display: flex;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .bodyOpciones {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .bodyOpciones div a {
+    font-size: large;
+  }
+
+  /* Ocultar el texto del logo en pantallas pequeñas */
+  .logoText {
+    display: none;
+  }
+}
+
+/* Mostrar el menú siempre en pantallas grandes */
+@media (min-width: 768px) {
+  .bodyOpciones {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .menuButton {
+    display: none;
+  }
+}
+
+hr {
+  height: 0.05em;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.2;
 }

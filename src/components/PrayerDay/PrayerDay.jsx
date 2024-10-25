@@ -1,28 +1,17 @@
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { deletePrayerDay } from '../../redux/actions';
-import Congreso2 from '../../assets/Congreso2.jpg';
 import style from './PrayerDay.module.css'
 
-const PrayerDay = ({ id, title, schedule, date }) => {
-    const dispatch = useDispatch();
-
-    const onClickHandler = () => {
-        dispatch(deletePrayerDay(id));
-    };
+const PrayerDay = ({ id, title, time, date, image }) => {
 
     return (
         <div className={style.bodyActivity}>
-            <button onClick={onClickHandler}>X</button>
             <Link to={`/prayerday/${id}`}>
-                <p>{title}</p>
-                <div className={style.actImg}>
-                    <img src={Congreso2} alt="Congreso" />
+                <div className={style.image}>
+                    <img src={image} alt="Congreso" />
                 </div>
-                <div className={style.infoImg}>
-                    <p>{schedule}</p>
-                    <p>{date}</p>
-
+                <div className={style.info}>
+                    <h3>{title}</h3>
+                    <h5>{date.day}/{date.month}/{date.year} - {time}</h5>
                 </div>
             </Link>
         </div>

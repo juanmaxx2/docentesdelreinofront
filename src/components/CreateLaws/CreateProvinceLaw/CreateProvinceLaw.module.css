@@ -1,0 +1,62 @@
+.createNationalLawContainer {
+    min-height: 80vh;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.createFormContainer {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1.5em;
+    background-color: white;
+    width: 80%;
+}
+
+.createFormContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.createFormContainer form p {
+    margin-top: 1em;
+}
+
+.createFormContainer form input,
+.createFormContainer form select {
+    width: 100%;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+}
+
+.buttons button{
+    display: block;
+    margin: 1.5em auto;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    color: white;
+    background-color: rgb(219, 182, 19);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover{
+    background-color: rgb(192, 160, 16);
+}

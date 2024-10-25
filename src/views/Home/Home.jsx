@@ -1,61 +1,45 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from 'react';
-import { NavBar, Footer } from '../../components';
-import { getActivities, getInstitution, getProvince } from "../../redux/actions";
-import style from './Home.module.css';
 import { Link } from "react-router-dom";
-
-import Introduccion from '../../assets/Introduccion.jpg';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { NavBar, Footer, Featured, Province } from '../../components';
+import introduccion from '../../assets/Introduccion.jpg';
+import style from './Home.module.css';
+import { getActivities, getProvinces } from "../../redux/actions";
 
 const Home = () => {
     const dispatch = useDispatch();
-    const [loading, setLoading] = useState(false);
-    const institution = useSelector(state => state.institution);
+    const activities = useSelector(state => state.activities);
 
     useEffect(() => {
-        if (!loading) {
-            dispatch(getActivities('all', 'all'));
-            dispatch(getInstitution());
-            dispatch(getProvince());
-            setLoading(true);
-        }
-    }, []);
+        dispatch(getProvinces());
+        dispatch(getActivities('all', 'all', 'all'));
+    }, [dispatch]);
 
     return (
-        <div className={style.body}>
-
+        <div className={style.homeConteiner}>
             <NavBar />
 
-            <div className={style.biografia}>
-                <div>
-                    <img src={Introduccion} alt="Introduccion" />
+            <div className={style.body}>
+                <div className={style.video}>
                 </div>
-                <div className={style.biografiaText}>
-                    <p>{institution.introduction}</p>
-                </div>
-            </div>
 
-            <Link Link to='/activities' className={style.link}>
-                <div>
-                    <p>Imagen</p>
-                    <p>Actividades</p>
+                <div className={style.opcionesInst}>
+                    <div><Link to='/institution/docentesdelreino' className={style.link}>Docentes del reino</Link></div>
+                    <div><Link to='/nationalagency' className={style.link}>Agenda nacional</Link></div>
+                    <div><Link to='/action' className={style.link}>Acciones</Link></div>
+                    <div><Link to='/institution/adora' className={style.link}>Adora</Link></div>
+                    <div><Link to='/law' className={style.link}>Marco Legal</Link></div>
                 </div>
-                <div>
-                    <p>Imagen</p>
-                    <p>Charlas</p>
+
+                <div className={style.imgInst}>
+                    <img src={introduccion} alt="introduccion" />
                 </div>
-                <div>
-                    <p>Imagen</p>
-                    <p>Conferencias</p>
-                </div>
-                <div>
-                    <p>Imagen</p>
-                    <p>Jornadas de oracion</p>
-                </div>
-                <div>
-                    <p>Ver mas</p>
-                </div>
-            </Link>
+
+                <Featured activities={activities}/>
+
+                <Province />
+
+            </div>
 
             <Footer />
 
@@ -64,3 +48,4 @@ const Home = () => {
 };
 
 export default Home;
+

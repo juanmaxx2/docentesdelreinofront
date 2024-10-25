@@ -5,6 +5,7 @@
     justify-content: center;
     border-radius: 10px;
     min-height: 80vh;
+    margin: 2em 0;
 }
 
 .conteiner form {
@@ -59,7 +60,7 @@
     padding: 10px 20px;
     font-size: 1em;
     color: #fff;
-    background-color: #0e2d58;
+    background-color: rgb(219, 182, 19);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -67,14 +68,14 @@
 }
 
 .button button:hover {
-    background-color: #081D3A;
+    background-color: rgb(192, 160, 16);
 }
 
 .button a{
     padding: 10px 20px;
     font-size: 1em;
     color: #fff;
-    background-color: #0e2d58;
+    background-color: rgb(219, 182, 19);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -83,6 +84,6 @@
 }
 
 .button a:hover {
-    background-color: #081D3A;
+    background-color: rgb(192, 160, 16);
 }
 

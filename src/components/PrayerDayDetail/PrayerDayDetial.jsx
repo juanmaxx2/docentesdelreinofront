@@ -26,7 +26,7 @@ const PrayerDayDetail = () => {
             <div className={style.bodyActivity}>
                 <div className={style.IntroductionActivity}>
                     <div className={style.IntroductionActivityImg}>
-                        <img src={Congreso2} alt="Congreso" />
+                        <img src={activity.image} alt="Congreso" />
                     </div>
                     <div className={style.IntroductionActivityInfo}>
                         <div className={style.name}>
@@ -41,12 +41,12 @@ const PrayerDayDetail = () => {
                 <div className={style.informationActivity}>
                     <div>
                         <p>Url:</p>
-                        <p>{activity.url}</p>
+                        <p href={activity.url} target="_blank" rel="noopener noreferrer">{activity.url}</p>
                     </div>
                     <div>
                         <p>Fecha:</p>
-                        <p>{activity.date}</p>
-                        <p>{activity.schedule}</p>
+                        {activity.date?(<p>{activity.date.day}/{activity.date.month}/{activity.date.year}</p>):(<></>)} 
+                        <p>{activity.time}</p>
                     </div>
                 </div>
                 <Link to={`/updateactivity/${id}/prayerday`}><div>Modificar</div></Link>

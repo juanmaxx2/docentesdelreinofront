@@ -1,0 +1,128 @@
+.associationConteiner {
+    min-height: 80vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2em auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.title {
+    margin-top: 1em;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.buttonBack {
+    padding: 0.5em 2em;
+    margin: 1em;
+    display: block;
+    margin: 1.5em auto;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    color: white;
+    background-color: rgb(219, 182, 19);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonBack:hover {
+    background-color: rgb(192, 160, 16);
+}
+
+.institutionList {
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 2em;
+}
+
+.institutionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.institutionItem:hover {
+    background-color: #e7e7e7;
+}
+
+.institutionDetails {
+    flex-grow: 1;
+    text-decoration: none; 
+    color: inherit;
+}
+
+.institutionName {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333; 
+}
+
+.institutionIntroduction {
+    font-size: 14px;
+    color: #666;
+}
+
+.editButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(219, 182, 19); 
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.editButton:hover {
+    color: rgb(192, 160, 16);
+}
+
+.institutionList img {
+    width: 100px;
+    height: 100px;
+    margin: 0 2em;
+}
+
+.associationConteiner button{
+    margin-top: 1em;
+}
+
+.institutionInfo {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+}
+
+.conteinerloader{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid #e2e2e2; /* Light grey */
+    border-top: 16px solid #081D3A; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

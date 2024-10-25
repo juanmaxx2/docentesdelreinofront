@@ -1,6 +1,7 @@
 .bodyActivity {
-    background-color: #081D3A;
+    background-color: white;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -13,51 +14,40 @@
     -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
     -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
     box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    min-height: 20em;
 }
 
-.infoImg {
+.image {
     width: 100%;
+    height: 80%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.info {
+    width: 100%;
+    height: 20%;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-    padding: 0.2em 0;
-}
-
-.actImg {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-
-.bodyActivity button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    position: absolute;
-    top: 0.2em;
-    right: 0.2em;
 }
 
 .bodyActivity img {
     max-width: 95%;
+    max-height: 15em;
     border-radius: 0.5em;
+    padding: 0.5em;
 }
 
 .bodyActivity p {
     text-decoration: none;
-    color: white;
-    padding: 0.2em;
+    color: black;
 }
 
 .bodyActivity a {
     text-decoration: none;
-    color: white;
-    padding: 0.2em;
+    color: black;
 }

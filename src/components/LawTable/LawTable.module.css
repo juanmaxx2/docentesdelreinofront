@@ -1,0 +1,83 @@
+/* Contenedor de la tabla */
+.tableContainer {
+    width: 100%;
+}
+
+/* Estilos para la tabla */
+.table {
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.table th, .table td {
+    padding: 1em;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: rgb(192, 160, 16);
+    color: white;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table td {
+    color: #333;
+}
+
+/* Estilos para los botones de acciones (editar, eliminar) */
+.actionButtons {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.actionButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: rgb(219, 182, 19);
+    transition: color 0.3s ease;
+}
+
+.actionButton:hover {
+    color: rgb(192, 160, 16);
+}
+
+.editButton:hover {
+    color: #5bc0de;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteinerloader{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid #e2e2e2; /* Light grey */
+    border-top: 16px solid #081D3A; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

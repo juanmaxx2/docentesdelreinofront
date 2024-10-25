@@ -1,63 +1,63 @@
 .bodyActivity {
-    background-color: #081D3A;
+    background-color: white;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column; /* Cambiado a columna para mejorar el diseño en pantallas pequeñas */
+    justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
-    display: inline-block;
     margin: 1em;
     border-radius: 0.5em;
-    width: calc(25% - 5em);
+    width: calc(33.33% - 2em); /* Cambiado a 33.33% para tres columnas en pantallas grandes */
     font-size: larger;
-    -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
-    -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
     box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.34);
+    min-height: 20em;
 }
 
-.infoImg {
+.image {
     width: 100%;
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.info {
+    width: 100%;
+    height: auto; /* Cambiado a auto para que se ajuste al contenido */
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-    padding: 0.2em 0;
-}
-
-.actImg {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-
-.bodyActivity button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    position: absolute;
-    top: 0.2em;
-    right: 0.2em;
 }
 
 .bodyActivity img {
     max-width: 95%;
+    max-height: 15em;
     border-radius: 0.5em;
+    padding: 0.5em;
 }
 
 .bodyActivity p {
     text-decoration: none;
-    color: white;
-    padding: 0.2em;
+    color: black;
 }
 
 .bodyActivity a {
     text-decoration: none;
-    color: white;
-    padding: 0.2em;
+    color: black;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .bodyActivity {
+        width: 100%; /* Hace que cada actividad ocupe el 100% en pantallas pequeñas */
+        margin: 0.5em 0; /* Reduce el margen en pantallas pequeñas */
+    }
+
+    .bodyActivity img {
+        max-height: 10em;
+        width: auto;
+    }
 }

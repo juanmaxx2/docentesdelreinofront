@@ -1,0 +1,46 @@
+.mapContainer {
+    position: relative;
+    width: 100%; /* Cambiado a 100% para ocupar todo el ancho disponible */
+    max-width: 60em; /* Mantiene un tamaño máximo */
+    height: auto; /* Cambiado a auto para que se ajuste automáticamente */
+    padding: 0; /* Eliminado el padding innecesario */
+    margin: 0; /* Eliminado el margin innecesario */
+    display: grid;
+    justify-items: center;
+}
+
+.map {
+    width: 100%; /* Cambiado a 100% para que el mapa ocupe todo el ancho del contenedor */
+    height: auto; /* Mantener la relación de aspecto del mapa */
+    max-height: 50em; /* Máxima altura para el mapa */
+}
+
+.province {
+    fill: #a0a0a0; /* Color por defecto */
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.province:hover {
+    fill: #0356c2; /* Color al pasar el mouse */
+}
+
+.active {
+    fill: #081D3A; /* Color al hacer clic */
+}
+
+.provinceInfo {
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .mapContainer {
+        height: 50em; /* Mantener la altura en pantallas grandes */
+    }
+}

@@ -1,0 +1,57 @@
+.conteiner{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.conteiner form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    margin: auto auto;
+}
+
+.conteiner input, 
+.conteiner textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin: 0.8em 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.conteiner label {
+    margin-top: 3em;
+}
+
+.buttons {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.buttons a, 
+.buttons button {
+    padding: 0.8em;
+    background-color: rgb(219, 182, 19);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons a:hover, 
+.buttons button:hover {
+    background-color: rgb(192, 160, 16);
+}

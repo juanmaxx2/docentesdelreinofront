@@ -1,0 +1,131 @@
+.destacados {
+    width: 80%;
+    margin: 2.5em auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.destacados p {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.actividades {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+    height: 100%;
+}
+
+.actividad {
+    background-color: #f0f0f0;
+    width: 18%;
+    height: 35vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.actividad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    height: 70%;
+    width: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    padding: 0.5em 1em;
+    height: 30%;
+    text-align: left;
+    background-color: #f0f0f0;
+}
+
+.info p {
+    font-size: 1em;
+    color: #333;
+    margin: 0.2em 0;
+}
+
+.info p:first-of-type {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Loader */
+.conteinerloader {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid #e2e2e2;
+    border-top: 16px solid #081D3A;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .actividad {
+        width: 23%;
+    }
+}
+
+@media (max-width: 992px) {
+    .actividad {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .actividad {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .destacados {
+        width: 90%;
+    }
+
+    .actividad {
+        width: 100%;
+    }
+
+    .info p {
+        font-size: 0.9em;
+    }
+
+    .info p:first-of-type {
+        font-size: 1.1em;
+    }
+}

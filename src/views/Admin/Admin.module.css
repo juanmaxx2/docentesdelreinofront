@@ -1,0 +1,58 @@
+/* Estilos generales para el contenedor principal */
+.adminContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para el contenido central */
+.adminContent {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+/* Estilos para la lista de opciones de administración */
+.adminOptions {
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Estilos para los párrafos dentro de la lista */
+.adminOptions p {
+    margin: 1em 0;
+    padding: 0.5em;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Estilos para los botones */
+.adminOptions button {
+    display: block;
+    margin: 1em auto;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    color: white;
+    background-color: rgb(219, 182, 19);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Hover para los botones */
+.adminOptions button:hover {
+    background-color: rgb(192, 160, 16);
+}
+
+/* Estilo para el footer */
+footer {
+    margin-top: auto;
+}

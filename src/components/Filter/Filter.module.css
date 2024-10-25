@@ -1,24 +1,25 @@
 .bodyfilter {
     background-color: #FFFFFF;
-    padding: 10px;
     border-radius: 10px;
     text-align: center;
     height: fit-content;
     font-size: large;
-    -webkit-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
-    -moz-box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
-    box-shadow: 4px 6px 5px 0px rgba(0,0,0,0.34);
+    min-height: 80vh;
+    padding: 0.5em 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .filters {
-    background-color: #081D3A;
     border-radius: 0.5em;
-    margin: 2em 0;
     padding: 0.5em;
 } 
 
 .filters p {
-    color: #FFFFFF;
+    color: #081D3A;
+    font-size: medium;
 }
 
 .bodyfilter p {
@@ -36,36 +37,44 @@
 }
 
 .bodyfilter button {
-    background-color: #081D3A;
+    background-color: rgb(219, 182, 19);
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .bodyfilter button:hover {
-    background-color: #041b3a;
+    background-color: rgb(192, 160, 16);
 }
 
-.create {
-    width: 84%;
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 1em 0;
-    background-color: #081D3A;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1em;
+.map {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+.bodyfilter input[type="date"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #333;
+    text-align: center;
 }
 
-.create:hover {
-    background-color: #041b3a;
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .bodyfilter {
+        font-size: medium; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    .bodyfilter input[type="date"],
+    .bodyfilter select,
+    .bodyfilter button {
+        width: 90%; /* Aumenta el ancho para pantallas pequeñas */
+    }
 }
 
-.create a {
-    color: white;
-    text-decoration: none;
-}
