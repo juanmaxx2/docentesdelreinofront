@@ -1,6 +1,6 @@
 [build]
   publish = "dist" # o "build", según la carpeta donde Vite genera el proyecto
-  command = "npm run build"
+  command = "npm run dev"
 
 [[redirects]]
   from = "/*"
